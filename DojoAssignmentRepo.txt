@@ -1,0 +1,119 @@
+PCJS:desktop pcjs$ cd terminal_git_github/
+PCJS:terminal_git_github pcjs$ ls
+DojoAssignments
+Screen Shot 2017-03-10 at 6.09.10 PM.png
+commands.txt
+PCJS:terminal_git_github pcjs$ cd DojoAssignments/
+PCJS:DojoAssignments pcjs$ git init
+Initialized empty Git repository in /Users/pcjs/Desktop/terminal_git_github/DojoAssignments/.git/
+PCJS:DojoAssignments pcjs$ git add .
+PCJS:DojoAssignments pcjs$ git status
+On branch master
+
+Initial commit
+
+Changes to be committed:
+  (use "git rm --cached <file>..." to unstage)
+
+	new file:   MEAN/about.txt
+	new file:   Python/about.txt
+	new file:   Ruby/about.txt
+	new file:   WebFundamentals/CSS/about.txt
+	new file:   WebFundamentals/Git/about.txt
+	new file:   WebFundamentals/HTML/about.txt
+	new file:   WebFundamentals/HTML/indentation.html
+	new file:   WebFundamentals/Javascript/about.txt
+	new file:   WebFundamentals/about.txt
+	new file:   assignments.txt
+	new file:   iOS/about.txt
+	new file:   netCore/about.txt
+
+PCJS:DojoAssignments pcjs$ git log
+fatal: your current branch 'master' does not have any commits yet
+PCJS:DojoAssignments pcjs$ git commit -m "preparing to push dir to github"
+[master (root-commit) 462dcf9] preparing to push dir to github
+ 12 files changed, 34 insertions(+)
+ create mode 100644 MEAN/about.txt
+ create mode 100644 Python/about.txt
+ create mode 100644 Ruby/about.txt
+ create mode 100644 WebFundamentals/CSS/about.txt
+ create mode 100644 WebFundamentals/Git/about.txt
+ create mode 100644 WebFundamentals/HTML/about.txt
+ create mode 100644 WebFundamentals/HTML/indentation.html
+ create mode 100644 WebFundamentals/Javascript/about.txt
+ create mode 100644 WebFundamentals/about.txt
+ create mode 100644 assignments.txt
+ create mode 100644 iOS/about.txt
+ create mode 100644 netCore/about.txt
+PCJS:DojoAssignments pcjs$ git log
+commit 462dcf9ffd1b7f8e69b4487c86859fc6243e284c
+Author: Phillip Shafer <pcjshafer@gmail.com>
+Date:   Mon Mar 13 19:14:46 2017 -0700
+
+    preparing to push dir to github
+PCJS:DojoAssignments pcjs$ git remote add origin https://github.com/pcjshafer/DojoAssignments.git
+PCJS:DojoAssignments pcjs$ git push -u origin master
+Counting objects: 7, done.
+Delta compression using up to 4 threads.
+Compressing objects: 100% (5/5), done.
+Writing objects: 100% (7/7), 763 bytes | 0 bytes/s, done.
+Total 7 (delta 0), reused 0 (delta 0)
+To https://github.com/pcjshafer/DojoAssignments.git
+ * [new branch]      master -> master
+Branch master set up to track remote branch master from origin.
+PCJS:DojoAssignments pcjs$ git status
+On branch master
+Your branch is up-to-date with 'origin/master'.
+nothing to commit, working tree clean
+PCJS:DojoAssignments pcjs$ touch readMe.txt
+PCJS:DojoAssignments pcjs$ open readMe.txt
+PCJS:DojoAssignments pcjs$ git status
+On branch master
+Your branch is up-to-date with 'origin/master'.
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+	readMe.txt
+
+nothing added to commit but untracked files present (use "git add" to track)
+PCJS:DojoAssignments pcjs$ git add .
+PCJS:DojoAssignments pcjs$ git status
+On branch master
+Your branch is up-to-date with 'origin/master'.
+Changes to be committed:
+  (use "git reset HEAD <file>..." to unstage)
+
+	new file:   readMe.txt
+
+PCJS:DojoAssignments pcjs$ git commit -m "added readMe.txt directory explanation file"
+[master 3cb10c2] added readMe.txt directory explanation file
+ 1 file changed, 17 insertions(+)
+ create mode 100644 readMe.txt
+PCJS:DojoAssignments pcjs$ git status
+On branch master
+Your branch is ahead of 'origin/master' by 1 commit.
+  (use "git push" to publish your local commits)
+nothing to commit, working tree clean
+PCJS:DojoAssignments pcjs$ git log
+commit 3cb10c22ced0ee0976867a84abd1e50c2420b2b8
+Author: Phillip Shafer <pcjshafer@gmail.com>
+Date:   Mon Mar 13 19:18:30 2017 -0700
+
+    added readMe.txt directory explanation file
+
+commit 462dcf9ffd1b7f8e69b4487c86859fc6243e284c
+Author: Phillip Shafer <pcjshafer@gmail.com>
+Date:   Mon Mar 13 19:14:46 2017 -0700
+
+    preparing to push dir to github
+PCJS:DojoAssignments pcjs$ git push -u origin master
+Counting objects: 3, done.
+Delta compression using up to 4 threads.
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 469 bytes | 0 bytes/s, done.
+Total 3 (delta 1), reused 0 (delta 0)
+remote: Resolving deltas: 100% (1/1), completed with 1 local objects.
+To https://github.com/pcjshafer/DojoAssignments.git
+   462dcf9..3cb10c2  master -> master
+Branch master set up to track remote branch master from origin.
+PCJS:DojoAssignments pcjs$ 
